@@ -1,0 +1,1237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Sticky Top Navbar -->
+    <header class="navbar">
+      <div class="nav-left">
+        <a href="#" class="logo" aria-label="Netflix">NETFLIX</a>
+      </div>
+      <div class="nav-center">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            placeholder="Search titles..."
+            aria-label="Search titles"
+          />
+        </div>
+        <button class="btn-kids" aria-pressed="false">Kids</button>
+        <select class="genre-select" aria-label="Browse">
+          <option>All</option>
+          <option>Movies</option>
+          <option>TV Shows</option>
+          <option>My List</option>
+        </select>
+      </div>
+      <div class="nav-right">
+        <div class="profiles">
+          <div class="profile" aria-label="Profile 1"></div>
+          <div class="profile" aria-label="Profile 2"></div>
+          <div class="profile" aria-label="Profile 3"></div>
+          <div class="profile" aria-label="Profile 4"></div>
+          <button class="btn-signin">Sign in</button>
+        </div>
+        <div class="icons">
+          <i class="fa-solid fa-heart" aria-label="My List"></i>
+          <i class="fa-solid fa-bell" aria-label="Notifications"></i>
+          <i class="fa-solid fa-chevron-down" aria-label="Profile menu"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div
+        class="hero-bg"
+        style="background-image: url(&quot;images/gg.jpg&quot;)"
+      ></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Unlimited movies, TV shows, and more</h1>
+        <p>Starts at Rs 250. Cancel anytime.</p>
+        <div class="hero-buttons">
+          <button class="btn-play">
+            <i class="fa-solid fa-play"></i>
+            Play
+          </button>
+          <button class="btn-my-list">
+            <i class="fa-solid fa-plus"></i>
+            My List
+          </button>
+        </div>
+      </div>
+      <div class="hero-play-btn">
+        <i class="fa-solid fa-play"></i>
+      </div>
+    </section>
+
+    <!-- Main Content Rows -->
+    <main class="main-content">
+      <!-- Row 1: Trending Now -->
+      <section class="row">
+        <h2>Trending Now</h2>
+        <div class="row-container">
+          <div class="poster-card">
+            <img src="images/stranger.webp" alt="Stranger Things poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Stranger Things</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/crown.webp" alt="The Crown poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Crown</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/moneyheist.webp" alt="Money Heist poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Money Heist</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/officeposter.webp" alt="The Office poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Office</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/badposter.webp" alt="Breaking Bad poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Breaking Bad</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/inceptionposter.webp" alt="Inception poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Inception</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/matrixposter.webp" alt="The Matrix poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Matrix</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/pickyblinders.webp" alt="Peaky Blinders poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Peaky Blinders</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/ozarkposter.webp" alt="Ozark poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Ozark</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img
+              src="images/queengambet.webp"
+              alt="The Queen's Gambit poster"
+            />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Queen's Gambit</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Row 2: Action Movies -->
+      <section class="row">
+        <h2>Action Movies</h2>
+        <div class="row-container">
+          <div class="poster-card">
+            <img src="images/johnwickposter.webp" alt="John Wick poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">John Wick</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/madmaxposter.webp" alt="Mad Max poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Mad Max</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/diehardposter.webp" alt="Die Hard poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Die Hard</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/knight.webp" alt="The Dark Knight poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Dark Knight</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/avenger.webp" alt="Avengers poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Avengers</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/kingsman.webp" alt="Kingsman poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Kingsman</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/taker.webp" alt="Taken poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Taken</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img
+              src="images/fastandfurioys.webp"
+              alt="Fast and Furious poster"
+            />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Fast and Furious</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img
+              src="images/missionimpossible.webp"
+              alt="Mission Impossible poster"
+            />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Mission Impossible</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/johnwickposter.webp" alt="John Wick 2 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">John Wick 2</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Row 3: Top 10 TV Shows -->
+      <section class="row">
+        <h2>Top 10 TV Shows</h2>
+        <div class="row-container">
+          <div class="poster-card">
+            <img
+              src="images/strangerthingposter.webp"
+              alt="Stranger Things poster"
+            />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Stranger Things</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/officeposter2.webp" alt="The Office poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Office</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/breaking.webp" alt="Breaking Bad poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Breaking Bad</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/picky.webp" alt="Peaky Blinders poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Peaky Blinders</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/crownposter.webp" alt="The Crown poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Crown</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/hiestposter.webp" alt="Money Heist poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Money Heist</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/ozarkposter2.webp" alt="Ozark poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Ozark</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img
+              src="images/queengambet2.webp"
+              alt="The Queen's Gambit poster"
+            />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Queen's Gambit</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img
+              src="images/lastkingdomposter.webp"
+              alt="The Last Kingdom poster"
+            />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Last Kingdom</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img
+              src="images/goodplaceposter.webp"
+              alt="The Good Place poster"
+            />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Good Place</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Row 4: New Releases -->
+      <section class="row">
+        <h2>New Releases</h2>
+        <div class="row-container">
+          <div class="poster-card">
+            <img src="images/newmovieposter.webp" alt="New Movie 1 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">New Movie 1</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie2.webp" alt="New Movie 2 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">New Movie 2</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie3.webp" alt="New Movie 3 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">New Movie 3</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie4.webp" alt="New Movie 4 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">New Movie 4</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie5.webp" alt="New Movie 5 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">New Movie 5</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie6.webp" alt="New Movie 6 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">New Movie 6</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie7.webp" alt="New Movie 7 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">New Movie 7</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie8.webp" alt="New Movie 8 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">New Movie 8</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie9.webp" alt="New Movie 9 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">New Movie 9</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie10.webp" alt="New Movie 10 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">New Movie 10</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Row 5: Because You Watched Stranger Things -->
+      <section class="row">
+        <h2>Because You Watched Stranger Things</h2>
+        <div class="row-container">
+          <div class="poster-card">
+            <img src="images/movie11.webp" alt="Stranger Things poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Stranger Things</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie12.webp" alt="Dark poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Dark</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie13.webp" alt="The Umbrella Academy poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Umbrella Academy</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie14.webp" alt="The Strain poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Strain</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie15.webp" alt="The X‑Files poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The X‑Files</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie16.webp" alt="Supernatural poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Supernatural</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie17.webp" alt="The Expanse poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Expanse</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img
+              src="images/movie18.webp"
+              alt="The Man in the High Castle poster"
+            />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Man in the High Castle</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie19.webp" alt="Westworld poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Westworld</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/movie20.webp" alt="Black Mirror poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Black Mirror</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Row 6: Sci‑Fi Hits -->
+      <section class="row">
+        <h2>Sci‑Fi Hits</h2>
+        <div class="row-container">
+          <div class="poster-card">
+            <img src="images/21.webp" alt="Interstellar poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Interstellar</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/22.webp" alt="Arrival poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Arrival</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/23.webp" alt="Ex Machina poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Ex Machina</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/34.webp" alt="Annihilation poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Annihilation</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/25.webp" alt="The Martian poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Martian</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/26.webp" alt="Arrival poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Arrival</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/27.webp" alt="Ad Astra poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Ad Astra</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/28.webp" alt="Blade Runner 2049 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Blade Runner 2049</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/29.webp" alt="Arrival poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Arrival</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/30.webp" alt="The Matrix Resurrections poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Matrix Resurrections</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Row 7: Romantic Comedies -->
+      <section class="row">
+        <h2>Romantic Comedies</h2>
+        <div class="row-container">
+          <div class="poster-card">
+            <img src="images/31.webp" alt="To All The Boys poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">To All The Boys</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/32.webp" alt="The Kissing Booth poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Kissing Booth</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/33.webp" alt="Set It Up poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Set It Up</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/34.webp" alt="Always Be My Maybe poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Always Be My Maybe</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/35.webp" alt="The Half of It poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Half of It</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/36.webp" alt="Love Hard poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Love Hard</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/37.webp" alt="The Love Pants poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Love Pants</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/38.webp" alt="The Love Pants 2 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Love Pants 2</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/39.webp" alt="The Love Pants 3 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Love Pants 3</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/40.webp" alt="The Love Pants 4 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Love Pants 4</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Row 8: Documentaries -->
+      <section class="row">
+        <h2>Documentaries</h2>
+        <div class="row-container">
+          <div class="poster-card">
+            <img src="images/41.webp" alt="Our Planet poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Our Planet</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/42.webp" alt="The Social Dilemma poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Social Dilemma</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/43.webp" alt="13th poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">13th</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/44.webp" alt="The Last Dance poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Last Dance</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/45.webp" alt="Making a Murderer poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Making a Murderer</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/46.webp" alt="The Game Changers poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Game Changers</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/47.webp" alt="Our Planet 2 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Our Planet 2</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/48.webp" alt="The Social Dilemma 2 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Social Dilemma 2</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/49.webp" alt="13th 2 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">13th 2</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/50.webp" alt="The Last Dance 2 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Last Dance 2</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Row 9: Kids & Family -->
+      <section class="row">
+        <h2>Kids & Family</h2>
+        <div class="row-container">
+          <div class="poster-card">
+            <img src="images/79.webp" alt="Bluey poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Bluey</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/78.webp" alt="Peppa Pig poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Peppa Pig</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/77.webp" alt="PAW Patrol poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">PAW Patrol</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/76.webp" alt="Bluey 2 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Bluey 2</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/30.webp" alt="Peppa Pig 2 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Peppa Pig 2</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/61.webp" alt="PAW Patrol 2 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">PAW Patrol 2</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/62.webp" alt="Bluey 3 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Bluey 3</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/63.webp" alt="Peppa Pig 3 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Peppa Pig 3</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/64.webp" alt="PAW Patrol 3 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">PAW Patrol 3</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/65.webp" alt="Bluey 4 poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Bluey 4</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Row 10: Because You Watched Inception -->
+      <section class="row">
+        <h2>Because You Watched Inception</h2>
+        <div class="row-container">
+          <div class="poster-card">
+            <img src="images/66.webp" alt="Inception poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Inception</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/67.webp" alt="Interstellar poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Interstellar</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/68.webp" alt="Memento poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Memento</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/69.webp" alt="Tenet poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Tenet</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/70.webp" alt="Dunkirk poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Dunkirk</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/71.webp" alt="The Dark Knight poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Dark Knight</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/72.webp" alt="The Dark Knight Rises poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">The Dark Knight Rises</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/73.webp" alt="Man of Steel poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Man of Steel</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img src="images/74.webp" alt="Justice League poster" />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Justice League</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="poster-card">
+            <img
+              src="images/75.webp"
+              alt="Zack Snyder's Justice League poster"
+            />
+            <div class="poster-overlay">
+              <div class="play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="poster-title">Zack Snyder's Justice League</span>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Promotional Banner -->
+      <section class="promo-banner">
+        <div class="promo-content">
+          <h3>Watch Stranger Things now</h3>
+          <p>Season 4 is here. Start streaming today.</p>
+          <button class="btn-play">
+            <i class="fa-solid fa-play"></i>
+            Play
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer-text">Questions? Contact us.</p>
+      <div class="footer-links">
+        <ul class="footer-col">
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Speed Test</a></li>
+        </ul>
+        <ul class="footer-col">
+          <li><a href="#">Account</a></li>
+          <li><a href="#">Ways to Watch</a></li>
+          <li><a href="#">Corporate Information</a></li>
+          <li><a href="#">Only on Netflix</a></li>
+        </ul>
+        <ul class="footer-col">
+          <li><a href="#">Media Center</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <ul class="footer-col">
+          <li><a href="#">Cookie Preferences</a></li>
+          <li><a href="#">Legal Notices</a></li>
+          <li><a href="#">Investor Relations</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook-f" aria-label="Facebook"></i>
+          <i class="fa-brands fa-twitter" aria-label="Twitter"></i>
+          <i class="fa-brands fa-instagram" aria-label="Instagram"></i>
+        </div>
+        <div class="country-lang">
+          <span>Netflix Pakistan</span>
+          <select class="language-select">
+            <option>English</option>
+            <option>Urdu</option>
+            <option>Spanish</option>
+            <option>French</option>
+            <option>German</option>
+          </select>
+        </div>
+        <p class="copyright">© 2023 Netflix, Inc.</p>
+      </div>
+    </footer>
+  </body>
+</html>
